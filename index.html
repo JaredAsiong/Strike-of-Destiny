@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strike of Destiny — Official Game Website & Lore Compendium</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Ambient Background Canvas -->
+  <canvas id="emberCanvas" aria-hidden="true"></canvas>
+
+  <!-- Sticky Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#top" class="brand">
+        <span class="brand-red">STRIKE</span> <span class="brand-white">OF DESTINY</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#trailer">Official Trailer</a>
+        <a href="#concept">Vision & Modes</a>
+        <a href="#heroes">Heroes & Lore</a>
+        <a href="#arsenal">Arsenal & Synergies</a>
+        <a href="#world">World & Biomes</a>
+        <a href="#bestiary">Bestiary & Bosses</a>
+        <a href="#events">Crisis & Elites</a>
+        <a href="#controls">Controls</a>
+      </nav>
+      <a href="#trailer" class="nav-cta">▶ Watch Trailer</a>
+    </div>
+  </header>
+
+  <!-- HERO BANNER -->
+  <section id="top" class="hero-banner">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow-badge">2D ACTION ROGUELIKE SURVIVOR • UNITY 6</div>
+        <h1 class="game-title">
+          <span class="title-strike">STRIKE</span>
+          <span class="title-destiny">OF DESTINY</span>
+        </h1>
+        <p class="hero-tagline">
+          Survive the Necrotic Blight. Command four legendary heroes with distinct weapons and ultimate abilities, forge Mythic weapon synergies, hunt down Diablo-style Elite Champions, and shatter screen-shaking World Bosses.
+        </p>
+
+        <div class="hero-cta-row">
+          <a href="#trailer" class="btn btn-primary">▶ Watch Official Trailer</a>
+          <a href="#heroes" class="btn btn-secondary">Meet the 4 Heroes</a>
+          <a href="#bestiary" class="btn btn-secondary">Hunter's Bestiary</a>
+        </div>
+
+        <div class="stat-ribbons">
+          <div class="stat-pill">
+            <span class="stat-num">4</span>
+            <span class="stat-label">Playable Hero Classes</span>
+          </div>
+          <div class="stat-pill">
+            <span class="stat-num">9</span>
+            <span class="stat-label">Weapons & Mythic Evolutions</span>
+          </div>
+          <div class="stat-pill">
+            <span class="stat-num">4</span>
+            <span class="stat-label">Stages & World Bosses</span>
+          </div>
+          <div class="stat-pill">
+            <span class="stat-num">3</span>
+            <span class="stat-label">Core Game Modes</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Animated Pixel-Art Squad ShowcaseCard -->
+      <div class="hero-showcase-card">
+        <div class="showcase-header">
+          <span class="live-dot"></span>
+          <span>LIVE IN-GAME HERO SPRITE SQUAD (6-FRAME WALK CYCLES)</span>
+        </div>
+        <div class="squad-stage">
+          <div class="squad-member" data-select-hero="shinobi" title="Click to inspect Kaito">
+            <div class="sprite-box">
+              <div class="pixel-sprite sprite-shinobi" data-dir="down"></div>
+            </div>
+            <span class="squad-name" style="color:#33e6ff;">Kaito</span>
+            <span class="squad-role">Shadow Shinobi</span>
+          </div>
+          <div class="squad-member" data-select-hero="paladin" title="Click to inspect Sir Gareth">
+            <div class="sprite-box">
+              <div class="pixel-sprite sprite-paladin" data-dir="down"></div>
+            </div>
+            <span class="squad-name" style="color:#ffd940;">Sir Gareth</span>
+            <span class="squad-role">Iron Paladin</span>
+          </div>
+          <div class="squad-member" data-select-hero="alchemist" title="Click to inspect Doctor Vex">
+            <div class="sprite-box">
+              <div class="pixel-sprite sprite-alchemist" data-dir="down"></div>
+            </div>
+            <span class="squad-name" style="color:#4dff73;">Doctor Vex</span>
+            <span class="squad-role">Plague Alchemist</span>
+          </div>
+          <div class="squad-member" data-select-hero="warden" title="Click to inspect Zephyr">
+            <div class="sprite-box">
+              <div class="pixel-sprite sprite-warden" data-dir="down"></div>
+            </div>
+            <span class="squad-name" style="color:#59bfff;">Zephyr</span>
+            <span class="squad-role">Storm Warden</span>
+          </div>
+        </div>
+        <p class="showcase-caption">
+          Click any hero above or explore the interactive Lore Vault below to test their 4-directional animations and inspect their backstory.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFICIAL GAME TRAILER & CINEMATIC SHOWCASE -->
+  <section id="trailer" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">OFFICIAL CINEMATIC SHOWCASE</span>
+        <h2>Official Game Trailer & Character Cinematics</h2>
+        <p>
+          Watch the 5-Act <strong>Strike of Destiny</strong> cinematic trailer reel—featuring all four heroes' origin cutscenes and the secret high-roller boss reveal—or jump directly to any chapter below.
+        </p>
+      </div>
+
+      <div class="trailer-theater">
+        <div class="theater-top-bar">
+          <div class="theater-now-playing">
+            <span class="live-dot"></span>
+            <span id="trailerActTag">FEATURED • OFFICIAL GAMEPLAY TRAILER</span>
+            <strong id="trailerTitleText">Strike of Destiny — Official Gameplay Showcase</strong>
+          </div>
+          <div class="theater-controls-right">
+            <label class="reel-toggle">
+              <input type="checkbox" id="autoReelCheckbox" checked />
+              <span>Auto-Play Next Trailer & Cinematics</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="video-stage" id="videoStage">
+          <video
+            id="mainTrailerVideo"
+            src="assets/videos/gameplay_trailer.mp4"
+            poster="assets/portraits/the_lich_portrait.png"
+            controls
+            playsinline
+            preload="metadata"
+          ></video>
+
+          <!-- Lower-third cinematic caption overlay -->
+          <div class="trailer-lower-third" id="trailerLowerThird">
+            <span class="lt-kicker" id="ltKicker">OFFICIAL GAMEPLAY TRAILER • ACTION ROGUELIKE SURVIVOR</span>
+            <h3 id="ltHeading">Strike of Destiny — Gameplay Showcase</h3>
+            <p id="ltSub">"Survive relentless undead waves, evolve Mythic weapons, and conquer World Bosses!"</p>
+          </div>
+
+          <!-- Big center play button overlay when paused at start -->
+          <button id="bigTrailerPlayBtn" class="big-play-overlay" aria-label="Play Official Trailer">
+            <span class="play-triangle">▶</span>
+            <span class="play-text">PLAY OFFICIAL GAMEPLAY TRAILER</span>
+          </button>
+        </div>
+
+        <!-- 6 Chapter Selector Cards (Gameplay Trailer + 4 Heroes + Secret Boss) -->
+        <div class="trailer-chapters" role="tablist">
+          <button class="chapter-btn active" data-chapter="0">
+            <img src="assets/portraits/the_lich_portrait.png" alt="Official Gameplay Trailer" />
+            <div>
+              <span class="ch-act">★ FEATURED TRAILER</span>
+              <strong>Official Gameplay</strong>
+            </div>
+          </button>
+          <button class="chapter-btn" data-chapter="1">
+            <img src="assets/portraits/hero_portrait.png" alt="Kaito Trailer" />
+            <div>
+              <span class="ch-act">ACT I • HERO</span>
+              <strong>Kaito (Shinobi)</strong>
+            </div>
+          </button>
+          <button class="chapter-btn" data-chapter="2">
+            <img src="assets/portraits/iron_paladin_portrait.png" alt="Paladin Trailer" />
+            <div>
+              <span class="ch-act">ACT II • HERO</span>
+              <strong>Sir Gareth (Paladin)</strong>
+            </div>
+          </button>
+          <button class="chapter-btn" data-chapter="3">
+            <img src="assets/portraits/plague_alchemist_portrait.png" alt="Alchemist Trailer" />
+            <div>
+              <span class="ch-act">ACT III • HERO</span>
+              <strong>Doctor Vex (Alchemist)</strong>
+            </div>
+          </button>
+          <button class="chapter-btn" data-chapter="4">
+            <img src="assets/portraits/storm_warden_portrait.png" alt="Warden Trailer" />
+            <div>
+              <span class="ch-act">ACT IV • HERO</span>
+              <strong>Zephyr (Warden)</strong>
+            </div>
+          </button>
+          <button class="chapter-btn" data-chapter="5">
+            <img src="assets/portraits/jared_boss_portrait.png" alt="Ryan Boss Trailer" />
+            <div>
+              <span class="ch-act">CLIMAX • SECRET BOSS</span>
+              <strong>Ryan Jacob Solomon</strong>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: GAME VISION, DESIGN IDEAS & MODES -->
+  <section id="concept" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">GAME DESIGN & CORE IDEAS</span>
+        <h2>Where Bullet-Heaven Meets Active Skill Combat</h2>
+        <p>
+          Unlike passive auto-shooters where you only walk in circles, <strong>Strike of Destiny</strong> fuses relentless roguelike horde escalation with active twin-stick skill expression, projectile deflection physics, and tactical boss encounters.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <img src="assets/icons/icon_swords.png" alt="Clash Icon" />
+          </div>
+          <h3>Active Deflection & Clashing</h3>
+          <p>
+            Your manually aimed projectiles and orbiting sawblades physically clash with enemy fire in mid-air! Deflect Skeleton Archer arrows straight back into the undead ranks—while weaving through unstoppable World Boss bullet-hell patterns.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <img src="assets/icons/icon_wind.png" alt="Dodge Icon" />
+          </div>
+          <h3>I-Frame Dodge Rolls & Ultimates</h3>
+          <p>
+            Time your <strong>Dodge Roll</strong> (<code>Spacebar</code>) for invulnerability frames through lethal shockwaves and gravity wells. Build your Ultimate Gauge to 100% and press <code>Q</code> to unleash class-defining screen clears.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <img src="assets/icons/icon_fire.png" alt="Bloodlust Icon" />
+          </div>
+          <h3>Bloodlust Frenzy & Crisis Events</h3>
+          <p>
+            Chaining rapid kills ignites a <strong>Bloodlust Kill Streak</strong> that supercharges movement and attack speed. Mid-round Crisis Events—from Blood Moons to fleeing Golden Scavengers—keep every minute unpredictable.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <img src="assets/icons/icon_coin.png" alt="Village Icon" />
+          </div>
+          <h3>Village Camp Meta-Progression</h3>
+          <p>
+            Every coin looted from slain elites, broken barrels, and treasure chests persists back to the <strong>Village Camp</strong>. Visit the Blacksmith, Apothecary, and Elder Shrine to permanently empower your heroes across runs.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3 GAME MODES -->
+      <div class="modes-banner">
+        <div class="mode-item">
+          <span class="mode-tag">MODE 01</span>
+          <h4>Standard Campaign</h4>
+          <p>Battle through 3 story acts + a hidden Secret Domain. Survive until the <strong>02:00 Horde Surge</strong>, endure the 60-second climax, and slay the stage's World Boss to claim victory.</p>
+        </div>
+        <div class="mode-item">
+          <span class="mode-tag">MODE 02</span>
+          <h4>Endless Survival</h4>
+          <p>No time limit, no mercy. Waves scale infinitely in density and toughness while a new World Boss invades the arena every 2 minutes. Compete for the highest survival time.</p>
+        </div>
+        <div class="mode-item">
+          <span class="mode-tag">MODE 03</span>
+          <h4>Boss Rush Gauntlet</h4>
+          <p>Enter a high-stakes boss gauntlet facing all 4 World Bosses back-to-back. Draft a permanent Boss Relic between rounds and receive a +100 HP breather heal after each victory.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: INTERACTIVE HEROES & LORE VAULT -->
+  <section id="heroes" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">CHAMPIONS OF THE REALM</span>
+        <h2>Playable Hero Classes & Character Lore</h2>
+        <p>Select a hero below to inspect their lore biography, innate class passives, signature weapon, and interactive 4-directional sprite animations.</p>
+      </div>
+
+      <!-- Hero Selector Tabs -->
+      <div class="hero-tabs" role="tablist">
+        <button class="hero-tab active" data-hero="shinobi" role="tab">
+          <img src="assets/portraits/hero_portrait.png" alt="Kaito" />
+          <div>
+            <strong>Kaito</strong>
+            <span>Shadow Shinobi</span>
+          </div>
+        </button>
+        <button class="hero-tab" data-hero="paladin" role="tab">
+          <img src="assets/portraits/iron_paladin_portrait.png" alt="Sir Gareth" />
+          <div>
+            <strong>Sir Gareth</strong>
+            <span>Iron Paladin</span>
+          </div>
+        </button>
+        <button class="hero-tab" data-hero="alchemist" role="tab">
+          <img src="assets/portraits/plague_alchemist_portrait.png" alt="Doctor Vex" />
+          <div>
+            <strong>Doctor Vex</strong>
+            <span>Plague Alchemist</span>
+          </div>
+        </button>
+        <button class="hero-tab" data-hero="warden" role="tab">
+          <img src="assets/portraits/storm_warden_portrait.png" alt="Zephyr" />
+          <div>
+            <strong>Zephyr</strong>
+            <span>Storm Warden</span>
+          </div>
+        </button>
+      </div>
+
+      <!-- Hero Detail Panel -->
+      <div id="heroDetailCard" class="hero-detail-card">
+        <div class="hero-visual-col">
+          <div class="portrait-frame" id="heroPortraitFrame">
+            <img id="heroPortraitImg" src="assets/portraits/hero_portrait.png" alt="Hero Portrait" />
+            <div class="portrait-badge" id="heroTitleBadge">SHADOW SHINOBI</div>
+          </div>
+
+          <div class="animator-card">
+            <div class="animator-top">
+              <span>4-DIRECTIONAL SPRITE PREVIEW</span>
+              <span class="fps-tag">9 FPS WALK CYCLE</span>
+            </div>
+            <div class="animator-stage">
+              <div id="interactiveHeroSprite" class="pixel-sprite sprite-shinobi" data-dir="down"></div>
+            </div>
+            <div class="dir-buttons">
+              <button class="dir-btn active" data-dir="down">▼ Front</button>
+              <button class="dir-btn" data-dir="up">▲ Back</button>
+              <button class="dir-btn" data-dir="left">◀ Left</button>
+              <button class="dir-btn" data-dir="right">▶ Right</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-info-col">
+          <div class="hero-heading-row">
+            <div>
+              <span class="hero-class-kicker" id="heroClassKicker">AGILITY & PRECISION ASSASSIN</span>
+              <h3 id="heroNameHeading">Kaito — The Shadow Shinobi</h3>
+            </div>
+            <div class="weapon-pill-group">
+              <div class="weapon-pill">
+                <img id="heroWeaponIcon" src="assets/icons/icon_crit.png" alt="Weapon" />
+                <span id="heroWeaponName">Click Kunai & Shurikens</span>
+              </div>
+              <button id="watchHeroCinematicBtn" class="btn-watch-hero" type="button">
+                ▶ Watch Hero Cinematic
+              </button>
+            </div>
+          </div>
+
+          <blockquote class="hero-lore-quote" id="heroLoreQuote">
+            "When the crimson mist swallowed the Hidden Leaf Outskirts, Kaito was the lone watchman to return alive. Having honed the forbidden twin-fang kunai technique in silence, he now dances across the blighted farmsteads like a phantom—striking down shambling horrors before their claws can touch the earth."
+          </blockquote>
+
+          <div class="perks-box">
+            <h4>Innate Class Perks & Playstyle</h4>
+            <ul id="heroPerksList" class="perks-list"></ul>
+          </div>
+
+          <div class="ultimate-box" id="heroUltimateBox">
+            <div class="ult-header">
+              <span class="ult-key">ULTIMATE [Q / RIGHT CLICK]</span>
+              <strong id="heroUltName">Shadow Clone Shuriken Storm</strong>
+            </div>
+            <p id="heroUltDesc">
+              Unleashes an omnidirectional spiral nova of razor kunais while granting phantom haste, shredding surrounding hordes and deflecting incoming projectiles.
+            </p>
+          </div>
+
+          <!-- Stat Bars -->
+          <div class="stats-bars">
+            <div class="stat-row">
+              <span class="stat-name">Base Vitality (HP)</span>
+              <div class="bar-track"><div id="barHp" class="bar-fill" style="width:67%"></div></div>
+              <span id="valHp" class="stat-val">100 HP</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-name">Movement Speed</span>
+              <div class="bar-track"><div id="barSpeed" class="bar-fill" style="width:100%"></div></div>
+              <span id="valSpeed" class="stat-val">1.20x (+20%)</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-name">Dodge Roll Reflex</span>
+              <div class="bar-track"><div id="barDodge" class="bar-fill" style="width:95%"></div></div>
+              <span id="valDodge" class="stat-val">1.10s Cooldown</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-name">Area Control & Synergy</span>
+              <div class="bar-track"><div id="barAoe" class="bar-fill" style="width:75%"></div></div>
+              <span id="valAoe" class="stat-val">High Single & Multi-Shot</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: WEAPON ARSENAL & MYTHIC SYNERGIES -->
+  <section id="arsenal" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">WEAPONS & ROGUELIKE EVOLUTIONS</span>
+        <h2>The Six Core Weapons & Mythic Synergies</h2>
+        <p>Every level-up presents a 3-card roguelike draft with Reroll and Banish tokens. Level up your core weapons and combine elemental traits to unlock devastating <strong>Mythic Synergies</strong>.</p>
+      </div>
+
+      <div class="weapons-grid">
+        <div class="weapon-card">
+          <div class="weapon-icon-wrap">
+            <img src="assets/weapons/shortsword.png" alt="Hero Projectiles" class="pixel-img" />
+          </div>
+          <div>
+            <span class="weapon-type">PRIMARY AUTO & MANUAL WEAPON</span>
+            <h4>Hero Signature Projectiles</h4>
+            <p>Fires class-specific weapons—<strong>Razor Kunais</strong>, <strong>Tempered Shortswords</strong>, <strong>Volatile Potion Vials</strong>, or <strong>Electric Plasma Balls</strong>. Upgrades add Multi-Shot volleys, Piercing, and rapid fire rate.</p>
+          </div>
+        </div>
+
+        <div class="weapon-card">
+          <div class="weapon-icon-wrap">
+            <img src="assets/weapons/spinning_blade.png" alt="Orbiting Sawblades" class="pixel-img" />
+          </div>
+          <div>
+            <span class="weapon-type">ORBITAL MELEE & DEFLECTION</span>
+            <h4>Whirlwind Orbiting Sawblades</h4>
+            <p>High-velocity steel sawblades that orbit your hero, slicing through close-range flankers and automatically knocking Skeleton Archer arrows out of the sky.</p>
+          </div>
+        </div>
+
+        <div class="weapon-card">
+          <div class="weapon-icon-wrap">
+            <img src="assets/icons/icon_lightning.png" alt="Chain Lightning" class="pixel-img" />
+          </div>
+          <div>
+            <span class="weapon-type">HIGH-PRIORITY SKY STRIKE</span>
+            <h4>Heaven's Chain Lightning</h4>
+            <p>Calls down crackling bolts from the heavens onto surrounding enemies, arcing electricity across packed clusters with zero travel time.</p>
+          </div>
+        </div>
+
+        <div class="weapon-card">
+          <div class="weapon-icon-wrap">
+            <img src="assets/weapons/potion_vial.png" alt="Acid Flask" class="pixel-img" />
+          </div>
+          <div>
+            <span class="weapon-type">AREA DENIAL & CORROSION</span>
+            <h4>Alchemist's Venom & Acid Flask</h4>
+            <p>Lobs glass chemical flasks that shatter on impact, blanketing the ground in bubbling toxic mist that melts enemy armor and ticks continuous poison damage.</p>
+          </div>
+        </div>
+
+        <div class="weapon-card">
+          <div class="weapon-icon-wrap">
+            <img src="assets/icons/icon_shield.png" alt="Aegis Forcefield" class="pixel-img" />
+          </div>
+          <div>
+            <span class="weapon-type">DEFENSIVE PULSE BARRIER</span>
+            <h4>Aegis Forcefield Barrier</h4>
+            <p>Surrounds the hero in a crystalline runic dome that periodically discharges a shockwave pulse, damaging and knocking back lunging hounds and zombies.</p>
+          </div>
+        </div>
+
+        <div class="weapon-card">
+          <div class="weapon-icon-wrap">
+            <img src="assets/icons/icon_star.png" alt="Radiant Aura" class="pixel-img" />
+          </div>
+          <div>
+            <span class="weapon-type">SACRED BURN SANCTUM</span>
+            <h4>Radiant Sanctum Aura</h4>
+            <p>Consecrates the ground beneath your feet with golden solar light, searing every undead creature that steps inside your sanctum circle.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mythic Synergies Banner -->
+      <div class="synergy-section">
+        <h3 class="synergy-title">⚡ MYTHIC WEAPON SYNERGIES (ULTIMATE EVOLUTIONS)</h3>
+        <div class="synergy-grid">
+          <div class="synergy-card">
+            <span class="mythic-badge">MYTHIC SYNERGY I</span>
+            <h4>Thunder-Blade Tempest</h4>
+            <p class="synergy-recipe">Orbiting Sawblades + Chain Lightning</p>
+            <p>Charges your orbiting sawblades with high-voltage storm mana, dramatically boosting rotation speed and discharging chain lightning arcs on every blade slice.</p>
+          </div>
+          <div class="synergy-card">
+            <span class="mythic-badge">MYTHIC SYNERGY II</span>
+            <h4>Plague Storm</h4>
+            <p class="synergy-recipe">Venom Acid Flask + Chain Lightning</p>
+            <p>Fuses storm magic with alchemical toxins so sky lightning strikes detonate pressurized poison clouds upon impact, carpeting the battlefield in corrosive vapor.</p>
+          </div>
+          <div class="synergy-card">
+            <span class="mythic-badge">MYTHIC SYNERGY III</span>
+            <h4>Void Singularity</h4>
+            <p class="synergy-recipe">High-Tier Projectile Mastery</p>
+            <p>Imbues your primary projectiles with dark gravity. Strikes have a <strong>40% chance</strong> to tear open a swirling black hole that drags nearby monsters inward before imploding!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: WORLD STAGES & BIOMES -->
+  <section id="world" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">THE BLIGHTED REALMS</span>
+        <h2>Four Stages, Biomes & Story Arenas</h2>
+        <p>Each stage is dynamically painted with custom 16x16 pixel-art architectural plazas, ring roads, and story-driven environmental props.</p>
+      </div>
+
+      <div class="stages-grid">
+        <div class="stage-card">
+          <div class="stage-header">
+            <img src="assets/tilesets/Village_Meadow_Tileset.png" alt="Village Meadow Tileset" class="tileset-preview" />
+            <div>
+              <span class="stage-num">STAGE 01 • 1.00x HP MULT</span>
+              <h4>The Overgrown Farmstead</h4>
+            </div>
+          </div>
+          <p class="stage-lore">
+            Kaito's journey back to his home village leads through once-peaceful meadows now overrun by the first wave of the undead blight. Wildflower beds, woodcutter stumps, and rustic village benches dot the crossroads.
+          </p>
+          <div class="stage-meta">
+            <span><strong>Horde:</strong> 100% Shambling Zombies</span>
+            <span><strong>World Boss:</strong> Giant Zombie Brute</span>
+          </div>
+        </div>
+
+        <div class="stage-card">
+          <div class="stage-header">
+            <img src="assets/tilesets/Necropolis_Crypt_Tileset.png" alt="Necropolis Tileset" class="tileset-preview" />
+            <div>
+              <span class="stage-num">STAGE 02 • 1.10x HP MULT</span>
+              <h4>The Royal Necropolis & Catacombs</h4>
+            </div>
+          </div>
+          <p class="stage-lore">
+            Ancient royal burial grounds where fallen knights lie desecrated by dark necromancy. Towering weeping angel statues, stone gargoyles, and cracked crypt fences cast long shadows under nocturnal moonlight.
+          </p>
+          <div class="stage-meta">
+            <span><strong>Horde:</strong> Zombies (60%) + Skeleton Archers (40%)</span>
+            <span><strong>World Boss:</strong> Giant Skeleton King</span>
+          </div>
+        </div>
+
+        <div class="stage-card">
+          <div class="stage-header">
+            <img src="assets/tilesets/Void_Sanctum_Tileset.png" alt="Void Sanctum Tileset" class="tileset-preview" />
+            <div>
+              <span class="stage-num">STAGE 03 • 1.20x HP MULT</span>
+              <h4>The Lich's Cursed Sanctum</h4>
+            </div>
+          </div>
+          <p class="stage-lore">
+            The origin epicenter of the apocalyptic blight. Reality fractures under purple mana rifts, petrified ash timber, and obsidian ritual monoliths anchoring the Lich Sovereign's unholy stronghold.
+          </p>
+          <div class="stage-meta">
+            <span><strong>Horde:</strong> Zombies (35%) + Archers (35%) + Hunting Dogs (30%)</span>
+            <span><strong>World Boss:</strong> The Lich Sovereign</span>
+          </div>
+        </div>
+
+        <div class="stage-card stage-card-special">
+          <div class="stage-header">
+            <img src="assets/tilesets/Royal_Casino_Tileset.png" alt="Royal Casino Tileset" class="tileset-preview" />
+            <div>
+              <span class="stage-num">SECRET STAGE • 1.30x HP MULT</span>
+              <h4>Ryan Jacob Solomon's Casino Domain</h4>
+            </div>
+          </div>
+          <p class="stage-lore">
+            A surreal VIP neon jackpot realm filled with 24k golden weeping angel monuments, lucky emerald boulders, and treasure chests—ruled by a high-roller gambler fueled by slot-machine scatters and Valorant skin bundles.
+          </p>
+          <div class="stage-meta">
+            <span><strong>Horde:</strong> Chaotic Elite Mix (All Enemies)</span>
+            <span><strong>Secret Boss:</strong> Ryan Jacob Solomon (10,000 HP)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: HUNTER'S BESTIARY & WORLD BOSSES -->
+  <section id="bestiary" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">HUNTER'S BESTIARY COMPENDIUM</span>
+        <h2>Monsters, Elites & World Bosses</h2>
+        <p>Study the lore, combat ratings, and tactical weaknesses of every threat recorded in the Hunter's Bestiary.</p>
+      </div>
+
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Entries (9)</button>
+        <button class="filter-btn" data-filter="boss">World Bosses (4)</button>
+        <button class="filter-btn" data-filter="minion">Horde & Events (4)</button>
+        <button class="filter-btn" data-filter="elite">Elite Champions (1)</button>
+      </div>
+
+      <div id="bestiaryGrid" class="bestiary-grid"></div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: ELITE AFFIXES & MID-ROUND CRISIS TIMELINE -->
+  <section id="events" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">DYNAMIC ENCOUNTERS</span>
+        <h2>Diablo-Style Elite Affixes & Crisis Timeline</h2>
+        <p>Every 45 seconds, an armored Elite Champion warlord invades the arena with 4x health, an overhead crown, an elemental aura, and a guaranteed Golden Treasure Chest drop.</p>
+      </div>
+
+      <div class="affix-grid">
+        <div class="affix-card affix-molten">
+          <div class="affix-head">
+            <span class="affix-emoji">🔥</span>
+            <div>
+              <h4>Molten Champion</h4>
+              <span>MAGMA TRAIL & DEATH NOVA</span>
+            </div>
+          </div>
+          <p>Leaves a scorching trail of molten lava puddles in its footsteps that burn careless players, and detonates into a 9-fireball radial nova upon death.</p>
+        </div>
+
+        <div class="affix-card affix-vortex">
+          <div class="affix-head">
+            <span class="affix-emoji">🌀</span>
+            <div>
+              <h4>Vortex Champion</h4>
+              <span>GRAVITATIONAL SINGULARITY</span>
+            </div>
+          </div>
+          <p>Periodically channels a dark purple gravity well that drags the hero inward toward its crushing melee core. Save your Dodge Roll to break free!</p>
+        </div>
+
+        <div class="affix-card affix-shielded">
+          <div class="affix-head">
+            <span class="affix-emoji">🛡️</span>
+            <div>
+              <h4>Shielded Champion</h4>
+              <span>ORBITAL RUNIC BARRIER</span>
+            </div>
+          </div>
+          <p>Protected by an impervious cyan energy dome powered by <strong>2 orbiting crystalline Runic Orbs</strong>. Shatter both orbiting orbs first to crack its invulnerability!</p>
+        </div>
+
+        <div class="affix-card affix-splitter">
+          <div class="affix-head">
+            <span class="affix-emoji">👻</span>
+            <div>
+              <h4>Phantasm Splitter</h4>
+              <span>TWIN CLONE DIVISION</span>
+            </div>
+          </div>
+          <p>When reduced below 50% health, fractures into two half-size, hyper-fast translucent Phantasm Clones that sprint aggressively at the player.</p>
+        </div>
+      </div>
+
+      <!-- Mid-Round Crisis Timeline -->
+      <div class="timeline-card">
+        <h3>⏱️ Anatomy of a Campaign Round (Crisis Event Timeline)</h3>
+        <div class="timeline-steps">
+          <div class="t-step">
+            <span class="t-time">00:40</span>
+            <strong>First Elite Champion</strong>
+            <p>An Elite Champion warlord enters the arena every 45s carrying a Golden Treasure Chest.</p>
+          </div>
+          <div class="t-step">
+            <span class="t-time">00:50</span>
+            <strong>The Blood Moon Rises</strong>
+            <p>22s crimson frenzy: enemies gain +35% speed & +40% damage, but drop 2x XP & extra Gold!</p>
+          </div>
+          <div class="t-step">
+            <span class="t-time">01:15</span>
+            <strong>Golden Scavenger Spotted</strong>
+            <p>Track the fleeing goblin's glowing golden footprints and slay it before its 26s portal opens!</p>
+          </div>
+          <div class="t-step">
+            <span class="t-time">01:40</span>
+            <strong>Skeleton Archer Ambush</strong>
+            <p>A tactical ring of 8 Skeleton Archers surrounds your position from all angles.</p>
+          </div>
+          <div class="t-step t-step-climax">
+            <span class="t-time">02:00</span>
+            <strong>HORDE SURGE & WORLD BOSS</strong>
+            <p>The stage's World Boss arrives with a cinematic dialogue taunt! Defeat the Boss & survive 60s to win.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: CONTROLS & INTERACTIVE PROPS -->
+  <section id="controls" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">MASTER THE ARENA</span>
+        <h2>Controls & Interactive Arena Props</h2>
+      </div>
+
+      <div class="controls-props-grid">
+        <div class="controls-card">
+          <h3>Keyboard & Mouse Controls</h3>
+          <div class="key-list">
+            <div class="key-row">
+              <div class="keycaps"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></div>
+              <div>
+                <strong>8-Directional Movement</strong>
+                <p>Also supports Arrow Keys. Smooth wall-sliding around trees, statues, and fences.</p>
+              </div>
+            </div>
+            <div class="key-row">
+              <div class="keycaps"><kbd>Left Click</kbd></div>
+              <div>
+                <strong>Manual Aimed Attack</strong>
+                <p>Fires your hero's primary weapon toward the mouse cursor (pairs with automatic firing).</p>
+              </div>
+            </div>
+            <div class="key-row">
+              <div class="keycaps"><kbd>Spacebar</kbd> / <kbd>Shift</kbd></div>
+              <div>
+                <strong>Tactical Dodge Roll</strong>
+                <p>Grants invulnerability frames (i-frames) to roll safely through boss arrows and shockwaves.</p>
+              </div>
+            </div>
+            <div class="key-row">
+              <div class="keycaps"><kbd>Q</kbd> / <kbd>Right Click</kbd></div>
+              <div>
+                <strong>Class Ultimate Ability</strong>
+                <p>Unleashes your hero's signature Ultimate ability once the Ultimate Gauge reaches 100%.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="props-card">
+          <h3>Interactive Battlefield Props & Pickups</h3>
+          <div class="props-list">
+            <div class="prop-item">
+              <img src="assets/props/treasure_chest.png" alt="Treasure Chest" />
+              <div>
+                <strong>Golden Treasure Chests</strong>
+                <p>Dropped by Elite Champions and the Golden Scavenger. Grants instant upgrades and gold showers.</p>
+              </div>
+            </div>
+            <div class="prop-item">
+              <img src="assets/props/explosive_barrel.png" alt="Explosive Barrel" />
+              <div>
+                <strong>Explosive Powder Barrels</strong>
+                <p>Lure zombie packs near volatile red barrels and detonate them for massive chain-reaction blasts.</p>
+              </div>
+            </div>
+            <div class="prop-item">
+              <img src="assets/props/healing_fountain.png" alt="Healing Fountain" />
+              <div>
+                <strong>Sanctified Healing Fountains</strong>
+                <p>Restores lost vitality during intense horde waves.</p>
+              </div>
+            </div>
+            <div class="prop-item">
+              <img src="assets/props/cursed_altar.png" alt="Cursed Altar" />
+              <div>
+                <strong>Cursed Blood Altars & Power Pickups</strong>
+                <p>Activate high-risk shrines and collect Vacuum Magnets, Nuke Bombs, and Potions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="brand">
+          <span class="brand-red">STRIKE</span> <span class="brand-white">OF DESTINY</span>
+        </div>
+        <p class="footer-sub">2D Action Roguelike Survivor • Built with Unity 6 (URP 2D)</p>
+      </div>
+      <div class="footer-links">
+        <a href="#top">Back to Top ↑</a>
+        <a href="#trailer">Trailers</a>
+        <a href="#heroes">Heroes</a>
+        <a href="#bestiary">Bestiary</a>
+        <a href="https://github.com/JaredAsiong/Strike-of-Destiny" target="_blank" rel="noopener">GitHub Repository</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
